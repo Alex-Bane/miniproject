@@ -2,7 +2,6 @@ version: '3.7'
 
 services: 
   service1:
-    build: ./service1/.
     image: adv-python/animalapp:service1
     deploy:
       replicas: 3
@@ -11,7 +10,6 @@ services:
       published: 5000
       protocol: tcp
   service2:
-    build: ./service2/.
     image: adv-python/animalapp:service2
     ports:
     - target: 5001

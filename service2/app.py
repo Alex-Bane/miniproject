@@ -9,7 +9,7 @@ def animal():
     return Response(random.choice(animals), mimetype="text/plain")
 
 @app.route('/noise', methods=['POST'])
-def noise():
+def noise(animals):
     animal = request.data.decode('utf-8')
     if animal == "Lion":
         noise = "Roar!"
